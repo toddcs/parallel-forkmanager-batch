@@ -1,5 +1,8 @@
 package Parallel::ForkManager::Batch;
 
+use strict;
+use warnings;
+
 use Parallel::ForkManager;
 
 sub new {
@@ -16,12 +19,12 @@ sub new {
 }
 
 sub run {
-    $self = shift;
+    my $self = shift;
 
     my $pfm = new Parallel::ForkManager( $self->{max_procs} );
 
-    $num_records = scalar @{ $self->{batch_records} };
-    $batch_size  = $self->{batch_size};
+    my $num_records = scalar @{ $self->{batch_records} };
+    my $batch_size  = $self->{batch_size};
 
     for ( my $i = 0 ; $i < $num_records ; $i += $batch_size ) {
         my $pid = $pfm->start and next;
