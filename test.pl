@@ -18,7 +18,7 @@ sub do_one {
     printf "child: record = [[%s]]\n", $record;
 }
 
-my $batch = Batch->new( $MAX_PROCESSES, $BATCH_SIZE, \@batch, \&do_one );
+my $batch = Parallel::ForkManager::Batch->new( $MAX_PROCESSES, $BATCH_SIZE, \@batch, \&do_one );
 
 $batch->run;
 
