@@ -15,13 +15,13 @@ sub new {
     $self->{batch_records} = $batch_records;
     $self->{doit}          = $doit;
 
-    return bless $self;
+    return bless $self, $class;
 }
 
 sub run {
     my $self = shift;
 
-    my $pfm = new Parallel::ForkManager( $self->{max_procs} );
+    my $pfm = Parallel::ForkManager->new( $self->{max_procs} );
 
     my $num_records = scalar @{ $self->{batch_records} };
     my $batch_size  = $self->{batch_size};
@@ -38,6 +38,8 @@ sub run {
     }
 
     $pfm->wait_all_children;
+
+    return;
 }
 
 1;
