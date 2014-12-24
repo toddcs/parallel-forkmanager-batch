@@ -1,4 +1,4 @@
-package Batch;
+package Parallel::ForkManager::Batch;
 
 use Parallel::ForkManager;
 
