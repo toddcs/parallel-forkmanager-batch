@@ -20,7 +20,7 @@ sub run {
 
     my $pfm = new Parallel::ForkManager( $self->{max_procs} );
 
-    $num_records = @{ $self->{batch_records} };
+    $num_records = scalar @{ $self->{batch_records} };
     $batch_size  = $self->{batch_size};
 
     for ( my $i = 0 ; $i < $num_records ; $i += $batch_size ) {
