@@ -27,7 +27,7 @@ sub run {
         my $pid = $pfm->start and next;
 
         for ( my $j = $i ; $j < $i + $batch_size ; ++$j ) {
-            last if $j >= scalar @{ $self->{batch_records} };
+            last if $j >= $num_records;
             $self->{doit}->( $self->{batch_records}[$j] );
         }
 
