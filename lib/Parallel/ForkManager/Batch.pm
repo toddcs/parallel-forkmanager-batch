@@ -52,6 +52,8 @@ sub run {
 
 =head1 SYNOPSIS
 
+    use Parallel::ForkManager;
+
     my $MAX_PROCESSES = 16;         # Passed thru to Parallel::ForkManager
     my $BATCH_SIZE    = 22;         # Max number of tasks per forked process
 
