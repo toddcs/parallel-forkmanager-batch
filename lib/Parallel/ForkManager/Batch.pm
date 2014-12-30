@@ -48,12 +48,12 @@ sub run {
 
 =head1 NAME
 
-    Parallel::ForkManager::Batch
+    Parallel::ForkManager::Batch - Call Parallel::ForkManager on batches of tasks
 
 =head1 SYNOPSIS
 
-    my $MAX_PROCESSES = ... ;          # Passed thru to Parallel::ForkManager
-    my $BATCH_SIZE    = ... ;          # Max number of tasks per forked process
+    my $MAX_PROCESSES = 16;         # Passed thru to Parallel::ForkManager
+    my $BATCH_SIZE    = 22;         # Max number of tasks per forked process
 
     my $tasks_to_batch = [
                     # ...
