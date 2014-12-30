@@ -9,51 +9,6 @@ use Parallel::ForkManager;
 
 # ABSTRACT: Calls Parallel::ForkManager on batches of tasks
 
-#=head2 FIXME Add POD here
-#
-#Also, verify that your cpan "pause" account is ready. You have requested it:
-#
-#  #  Request PAUSE account
-#  #  
-#  #  A PAUSE account is only required to distribute and manage Perl module
-#  #  distributions on CPAN. You do not need a PAUSE account to submit bug reports to
-#  #  RT or participate in many Perl community sites — please register a Bitcard
-#  #  account instead.
-#  #  
-#  #  Sending mail to: modules@perl.org todd.shandelman@gmail.com
-#  #  From: upload@pause.perl.org
-#  #  Subject: PAUSE ID request (TODDCS; Todd Shandelman)
-#  #  
-#  #  Request to register new user
-#  #  
-#  #  fullname: Todd Shandelman
-#  #    userid: TODDCS
-#  #      mail: CENSORED
-#  #  homepage: 
-#  #       why:
-#  #  
-#  #      Isn't it about time I give back to the developer community? I would like to
-#  #      start contributing, finally, after being a Perl developer for a very long
-#  #      time. (I'd rather not tell you how long :-)
-#  #  
-#  #  
-#  #  The following links are only valid for PAUSE maintainers:
-#  #  
-#  #  Registration form with editing capabilities:
-#  #    https://pause.perl.org/pause/authenquery?ACTION=add_user&
-#  #      USERID=c1110000_8f1dc0184adc147a&SUBMIT_pause99_add_user_sub=1
-#  #  Immediate (one click) registration:
-#  #    https://pause.perl.org/pause/authenquery?ACTION=add_user&
-#  #      USERID=c1110000_8f1dc0184adc147a&SUBMIT_pause99_add_user_Definitely=1
-#
-#Also dist.ini ;
-#
-#Publish the new module on cpan.
-#
-#Also refactor existing code in gator-bill-crons to use the new module.
-#
-#=cut
-
 sub new {
     my ( $class, $max_procs, $batch_size, $batch_records, $doit ) = @_;
 
