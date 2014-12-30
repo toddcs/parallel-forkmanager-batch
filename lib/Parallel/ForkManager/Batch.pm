@@ -128,7 +128,8 @@ A code reference, pointing to a subroutine that will be called repeatedly
 to process batches of tasks.  For each batch, this subroutine will
 be called $BATCH_SIZE times (except for the final batch, which may be
 smaller). This module arranges that each time the subroutine is called,
-it will receive exactly one argument, a single task from the batch list.
+it will receive exactly one argument, a single task from the list of tasks in
+C<$tasks_to_batch> .
 
 =back
 
