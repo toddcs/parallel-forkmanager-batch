@@ -151,11 +151,21 @@ This method takes no arguments and returns nothing.
 This module is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Todd Shandelman (C<< todd.shandelman@gmail.com >>)
 
 Robert Stone (C<< drzigman@cpan.org >>)
+
+=cut
+
+=head1 ACKNOWLEDGEMENTS
+
+(From T.S.) Special thanks to Robert Stone (see Authors above) for his generous
+assistance of unsurpassed depth and quality relating to numerous technical issues.
+And to Daniel Culver (C<< perlsufi@cpan.org >>) for valuable pointers
+pertaining to the packaging and deployment of this CPAN module. Also to Hostgator
+Inc. for donating the time used to develop this module.
 
 =cut
 
